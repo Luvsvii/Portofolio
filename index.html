@@ -4,161 +4,78 @@
   <meta charset="UTF-8">
   <title>CV Raisya Armevhia</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <!-- CSS -->
   <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
+<button class="theme-btn" onclick="toggleTheme()">🌙 Mode</button>
+
 <div class="container">
-
-  <!-- ===== HEADER + FOTO ===== -->
   <header>
-    <img 
-      src="https://pbs.twimg.com/media/Fz4x8Y2WwAEp9b7.jpg" 
-      alt="Foto Raisya" 
-      class="profile-pic">
-
+    <img src="https://pbs.twimg.com/media/Fy5e7BvWcAAvF6Y.jpg" class="profile-pic" onclick="openPhoto()">
     <h1>Raisya Armevhia</h1>
     <p>Mahasiswa | Kandidat Bidang Kesehatan</p>
   </header>
 
-  <!-- ===== INFORMASI PRIBADI ===== -->
-  <section class="info">
-    <h2>Informasi Pribadi</h2>
-    <p><strong>Email:</strong> raisaarmevia@gmail.com</p>
-    <p><strong>No. Telepon:</strong> 0827 5286 0222</p>
-    <p><strong>Alamat:</strong> Jakarta Timur, Indonesia</p>
-  </section>
+  <!-- TAB BUTTON -->
+  <div class="tabs">
+    <button onclick="showTab('profil')">Profil</button>
+    <button onclick="showTab('pendidikan')">Pendidikan</button>
+    <button onclick="showTab('karya')">Hasil Karya</button>
+  </div>
 
-  <!-- ===== PROFIL ===== -->
-  <section>
+  <!-- PROFIL -->
+  <section id="profil" class="tab-content active">
     <h2>Profil Singkat</h2>
-    <p>
-      Saya adalah seorang mahasiswa yang memiliki ketertarikan kuat di bidang kesehatan 
-      serta motivasi tinggi untuk berkembang secara profesional. 
-      Saya terbiasa belajar hal baru, memiliki kemampuan komunikasi yang baik, 
-      dan berkomitmen untuk bekerja dengan penuh tanggung jawab, 
-      khususnya untuk peluang kerja di bidang kesehatan di Jerman.
-    </p>
+    <p>Saya mahasiswa yang tertarik di bidang kesehatan dan teknologi, cepat belajar, disiplin, dan siap bekerja internasional.</p>
+
+    <h2>Keahlian</h2>
+
+    <div class="skill">
+      Bahasa Inggris
+      <div class="bar"><div class="fill" style="width:85%"></div></div>
+    </div>
+
+    <div class="skill">
+      Komunikasi
+      <div class="bar"><div class="fill" style="width:90%"></div></div>
+    </div>
+
+    <div class="skill">
+      Coding HTML/CSS
+      <div class="bar"><div class="fill" style="width:70%"></div></div>
+    </div>
   </section>
 
-  <!-- ===== PENDIDIKAN ===== -->
-  <section>
+  <!-- PENDIDIKAN -->
+  <section id="pendidikan" class="tab-content">
     <h2>Pendidikan</h2>
     <ul>
-      <li><strong>MIT Al-Hamid</strong> — Sekolah Dasar, Juli 2016</li>
-      <li><strong>SMPN 283 Jakarta</strong> — Sekolah Menengah Pertama, Juli 2022</li>
-      <li><strong>SMA Prestasi Prima</strong> — Sekolah Menengah Atas, Juni 2025</li>
+      <li>MIT Al-Hamid — SD (2016)</li>
+      <li>SMPN 283 Jakarta — SMP (2022)</li>
+      <li>SMA Prestasi Prima — SMA (2025)</li>
     </ul>
   </section>
 
-  <!-- ===== KEAHLIAN ===== -->
-  <section>
-    <h2>Keahlian</h2>
-    <ul>
-      <li>Berkomunikasi dalam Bahasa Inggris (lisan & tulisan)</li>
-      <li>Menerjemahkan Bahasa Indonesia ke Bahasa Inggris</li>
-      <li>Komunikasi interpersonal dengan pasien & tim</li>
-      <li>Disiplin, teliti, dan bertanggung jawab</li>
-      <li>Mampu bekerja di bawah tekanan</li>
-      <li>Manajemen waktu yang baik</li>
-      <li>Adaptif terhadap lingkungan dan budaya baru</li>
-      <li>Empati dan kepedulian tinggi</li>
-    </ul>
-  </section>
-
-  <!-- ===== HASIL KARYA ===== -->
-  <section>
+  <!-- KARYA -->
+  <section id="karya" class="tab-content">
     <h2>Hasil Karya</h2>
-
-    <div class="project-card">
-      <p><strong>Website Portfolio Pribadi</strong></p>
-      <p><a href="https://username.github.io/Portofolio/" target="_blank">Lihat Website</a></p>
-    </div>
-
-    <div class="project-card">
-      <p><strong>Proyek Python Turtle Graphics</strong></p>
-      <p>Membuat gambar bendera dan pola spirograph menggunakan Python.</p>
-    </div>
-
-    <div class="project-card">
-      <p><strong>Proyek Sekolah</strong></p>
-      <p>Laporan dan presentasi tugas akhir sekolah.</p>
-    </div>
-  </section>
-
-  <!-- ===== ORGANISASI ===== -->
-  <section>
-    <h2>Pengalaman Organisasi</h2>
     <ul>
-      <li><strong>OSIS SMA Prestasi Prima</strong> — Divisi Kesehatan (2023–2024)</li>
-      <li><strong>Kelompok Ilmiah Remaja (KIR)</strong> — Anggota Aktif (2022–2023)</li>
+      <li>Website CV interaktif (HTML, CSS, JS)</li>
+      <li>Desain UI Portfolio Web</li>
+      <li>Mini Project Python Turtle Art</li>
+      <li>Blog kesehatan digital</li>
     </ul>
-  </section>
-
-  <!-- ===== PENGALAMAN KERJA ===== -->
-  <section>
-    <h2>Pengalaman Kerja & Magang</h2>
-    <ul>
-      <li><strong>Relawan Klinik Pratama Jakarta</strong> — Asisten Administrasi (2024)</li>
-      <li><strong>Petugas UKS Sekolah</strong> — Magang (2023)</li>
-    </ul>
-  </section>
-
-  <!-- ===== SERTIFIKASI ===== -->
-  <section>
-    <h2>Sertifikasi</h2>
-    <ul>
-      <li>Basic Life Support (BLS) — 2024</li>
-      <li>Pelatihan Bahasa Inggris Intermediate — 2023</li>
-      <li>K3 Dasar (Keselamatan dan Kesehatan Kerja) — 2024</li>
-    </ul>
-  </section>
-
-  <!-- ===== BAHASA ===== -->
-  <section>
-    <h2>Kemampuan Bahasa</h2>
-    <ul>
-      <li>Bahasa Indonesia — Native</li>
-      <li>Bahasa Inggris — Intermediate (B1–B2)</li>
-      <li>Bahasa Jerman — Basic (A1, sedang belajar)</li>
-    </ul>
-  </section>
-
-  <!-- ===== PRESTASI ===== -->
-  <section>
-    <h2>Prestasi</h2>
-    <ul>
-      <li>Juara 2 Lomba Presentasi Bahasa Inggris (2023)</li>
-      <li>Finalis Karya Tulis Ilmiah Remaja (2022)</li>
-      <li>Siswa Berprestasi Akademik</li>
-    </ul>
-  </section>
-
-  <!-- ===== HOBI ===== -->
-  <section>
-    <h2>Hobi</h2>
-    <ul>
-      <li>Bernyanyi</li>
-      <li>Mendengarkan musik</li>
-      <li>Membaca</li>
-      <li>Bercerita</li>
-    </ul>
-  </section>
-
-  <!-- ===== TUJUAN KARIER ===== -->
-  <section>
-    <h2>Tujuan Karier</h2>
-    <p>
-      Mengembangkan karier di bidang kesehatan secara profesional,
-      khususnya di Jerman, dengan mengedepankan etika kerja,
-      kualitas pelayanan, serta pembelajaran berkelanjutan.
-    </p>
   </section>
 
 </div>
 
+<!-- POPUP FOTO -->
+<div id="photoModal" class="modal" onclick="closePhoto()">
+  <img src="https://pbs.twimg.com/media/Fy5e7BvWcAAvF6Y.jpg">
+</div>
+
+<script src="script.js"></script>
 </body>
 </html>
