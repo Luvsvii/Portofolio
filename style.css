@@ -13,10 +13,10 @@ body {
 .container {
   max-width: 850px;
   margin: 40px auto;
-  background: rgba(255, 255, 255, 0.95);
-  padding: 40px;
-  border-radius: 12px;
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+  background: rgba(255, 255, 255, 0.97);
+  padding: 35px 40px;
+  border-radius: 15px;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.25);
   opacity: 0;
   transform: translateY(30px);
   animation: fadeInUp 1s ease forwards;
@@ -24,11 +24,11 @@ body {
 
 /* ===== ANIMASI ===== */
 @keyframes fadeInUp {
-  0% {
+  from {
     opacity: 0;
     transform: translateY(30px);
   }
-  100% {
+  to {
     opacity: 1;
     transform: translateY(0);
   }
@@ -39,41 +39,98 @@ header {
   text-align: center;
   border-bottom: 3px solid #0a2540;
   padding-bottom: 20px;
+  margin-bottom: 20px;
 }
+
 header h1 {
   margin: 0;
-  font-size: 36px;
+  font-size: 38px;
   color: #0a2540;
+  letter-spacing: 1px;
 }
+
 header p {
   margin: 6px 0;
   font-size: 16px;
-  color: #555;
+  color: #444;
 }
 
 /* ===== SECTION ===== */
 section {
-  margin-top: 30px;
+  margin-top: 28px;
   animation: fadeInUp 1s ease forwards;
+  transition: all 0.3s ease;
 }
+
 section h2 {
   color: #0a2540;
   border-bottom: 2px solid #e0e6ed;
   padding-bottom: 6px;
   margin-bottom: 15px;
+  font-size: 20px;
 }
+
+/* ===== LIST ===== */
 ul {
   padding-left: 20px;
 }
+
 li {
   margin-bottom: 10px;
-}
-.info p {
-  margin: 6px 0;
+  line-height: 1.6;
 }
 
-/* ===== HOVER EFFECT (opsional) ===== */
+/* ===== INFO ===== */
+.info p {
+  margin: 6px 0;
+  font-size: 15px;
+}
+
+/* ===== LINK ===== */
+a {
+  color: #0a2540;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+a:hover {
+  text-decoration: underline;
+  color: #1a3b6b;
+}
+
+/* ===== HOVER SECTION ===== */
 section:hover {
-  transform: scale(1.02);
-  transition: transform 0.3s ease;
+  background: #f8fbff;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+/* ===== HASIL KARYA CARD ===== */
+.project-card {
+  background: #f0f6ff;
+  padding: 15px;
+  border-radius: 10px;
+  margin-bottom: 12px;
+  box-shadow: 0 5px 10px rgba(0,0,0,0.08);
+  transition: transform 0.2s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-3px);
+}
+
+/* ===== RESPONSIVE HP ===== */
+@media (max-width: 600px) {
+  .container {
+    padding: 20px;
+    margin: 20px;
+  }
+
+  header h1 {
+    font-size: 28px;
+  }
+
+  section h2 {
+    font-size: 18px;
+  }
 }
