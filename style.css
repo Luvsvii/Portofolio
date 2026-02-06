@@ -1,136 +1,156 @@
-/* ===== BODY & BACKGROUND ===== */
+/* ===== BODY BACKGROUND SOFT PINK ===== */
 body {
-  font-family: "Segoe UI", Arial, sans-serif;
+  font-family: "Poppins", "Segoe UI", Arial, sans-serif;
   margin: 0;
   padding: 0;
-  color: #1a1a1a;
-  background: linear-gradient(135deg, #0a2540, #1a3b6b);
-  background-attachment: fixed;
+  color: #3a2b2b;
+  background: linear-gradient(135deg, #ffd1dc, #ffb7c5, #ffe4ec);
+  background-size: 300% 300%;
+  animation: gradientMove 12s ease infinite;
   overflow-x: hidden;
 }
 
-/* ===== CONTAINER ===== */
+/* GRADIENT ANIMATION */
+@keyframes gradientMove {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* ===== CONTAINER GLASS ===== */
 .container {
-  max-width: 850px;
+  max-width: 900px;
   margin: 40px auto;
-  background: rgba(255, 255, 255, 0.97);
-  padding: 35px 40px;
-  border-radius: 15px;
-  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.25);
-  opacity: 0;
-  transform: translateY(30px);
-  animation: fadeInUp 1s ease forwards;
+  background: rgba(255, 255, 255, 0.75);
+  backdrop-filter: blur(12px);
+  padding: 40px;
+  border-radius: 25px;
+  box-shadow: 0 20px 40px rgba(255, 105, 135, 0.25);
+  animation: fadeInUp 1.2s ease forwards;
 }
 
-/* ===== ANIMASI ===== */
+/* FADE IN */
 @keyframes fadeInUp {
-  from {
-    opacity: 0;
-    transform: translateY(30px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+  from { opacity: 0; transform: translateY(40px); }
+  to { opacity: 1; transform: translateY(0); }
 }
 
-/* ===== HEADER ===== */
+/* ===== HEADER FLOAT ===== */
 header {
   text-align: center;
-  border-bottom: 3px solid #0a2540;
   padding-bottom: 20px;
-  margin-bottom: 20px;
+  border-bottom: 3px solid #ff9eb5;
+  animation: floatHeader 3s ease-in-out infinite;
+}
+
+@keyframes floatHeader {
+  0%,100% { transform: translateY(0); }
+  50% { transform: translateY(-6px); }
 }
 
 header h1 {
-  margin: 0;
-  font-size: 38px;
-  color: #0a2540;
-  letter-spacing: 1px;
+  margin: 10px 0 5px;
+  font-size: 40px;
+  color: #d6336c;
+  font-weight: 700;
 }
 
 header p {
-  margin: 6px 0;
-  font-size: 16px;
-  color: #444;
+  margin: 0;
+  font-size: 17px;
+  color: #7a3b50;
+  font-style: italic;
+}
+
+/* ===== FOTO PROFIL ===== */
+.profile-pic {
+  width: 160px;
+  height: 160px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 6px solid #ff9eb5;
+  box-shadow: 0 12px 25px rgba(255, 105, 135, 0.45);
+  transition: 0.4s ease;
+  margin-bottom: 10px;
+}
+
+.profile-pic:hover {
+  transform: scale(1.08) rotate(2deg);
+  box-shadow: 0 18px 40px rgba(255, 105, 135, 0.6);
 }
 
 /* ===== SECTION ===== */
 section {
   margin-top: 28px;
-  animation: fadeInUp 1s ease forwards;
-  transition: all 0.3s ease;
+  padding: 12px;
+  border-radius: 15px;
+  transition: 0.3s ease;
+}
+
+section:hover {
+  background: rgba(255, 182, 193, 0.15);
+  transform: translateX(5px);
 }
 
 section h2 {
-  color: #0a2540;
-  border-bottom: 2px solid #e0e6ed;
-  padding-bottom: 6px;
-  margin-bottom: 15px;
+  color: #d6336c;
+  border-left: 6px solid #ff9eb5;
+  padding-left: 10px;
   font-size: 20px;
 }
 
-/* ===== LIST ===== */
+/* LIST */
 ul {
   padding-left: 20px;
 }
-
 li {
   margin-bottom: 10px;
   line-height: 1.6;
 }
 
-/* ===== INFO ===== */
+/* INFO */
 .info p {
-  margin: 6px 0;
-  font-size: 15px;
+  margin: 5px 0;
 }
 
-/* ===== LINK ===== */
+/* LINK */
 a {
-  color: #0a2540;
+  color: #d6336c;
   text-decoration: none;
-  font-weight: 500;
+  font-weight: 600;
 }
-
 a:hover {
   text-decoration: underline;
-  color: #1a3b6b;
 }
 
-/* ===== HOVER SECTION ===== */
-section:hover {
-  background: #f8fbff;
-  padding: 10px;
-  border-radius: 10px;
-}
-
-/* ===== HASIL KARYA CARD ===== */
+/* PROJECT CARD */
 .project-card {
-  background: #f0f6ff;
+  background: rgba(255, 255, 255, 0.6);
   padding: 15px;
-  border-radius: 10px;
+  border-radius: 15px;
   margin-bottom: 12px;
-  box-shadow: 0 5px 10px rgba(0,0,0,0.08);
-  transition: transform 0.2s ease;
+  box-shadow: 0 8px 18px rgba(255, 105, 135, 0.15);
+  transition: 0.3s ease;
 }
 
 .project-card:hover {
-  transform: translateY(-3px);
+  transform: scale(1.03);
+  box-shadow: 0 12px 30px rgba(255, 105, 135, 0.35);
 }
 
-/* ===== RESPONSIVE HP ===== */
+/* RESPONSIVE */
 @media (max-width: 600px) {
   .container {
     padding: 20px;
-    margin: 20px;
+    margin: 15px;
   }
 
   header h1 {
     font-size: 28px;
   }
 
-  section h2 {
-    font-size: 18px;
+  .profile-pic {
+    width: 120px;
+    height: 120px;
   }
 }
