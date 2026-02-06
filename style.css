@@ -1,0 +1,79 @@
+/* ===== BODY & BACKGROUND ===== */
+body {
+  font-family: "Segoe UI", Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  color: #1a1a1a;
+  background: linear-gradient(135deg, #0a2540, #1a3b6b);
+  background-attachment: fixed;
+  overflow-x: hidden;
+}
+
+/* ===== CONTAINER ===== */
+.container {
+  max-width: 850px;
+  margin: 40px auto;
+  background: rgba(255, 255, 255, 0.95);
+  padding: 40px;
+  border-radius: 12px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+  opacity: 0;
+  transform: translateY(30px);
+  animation: fadeInUp 1s ease forwards;
+}
+
+/* ===== ANIMASI ===== */
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ===== HEADER ===== */
+header {
+  text-align: center;
+  border-bottom: 3px solid #0a2540;
+  padding-bottom: 20px;
+}
+header h1 {
+  margin: 0;
+  font-size: 36px;
+  color: #0a2540;
+}
+header p {
+  margin: 6px 0;
+  font-size: 16px;
+  color: #555;
+}
+
+/* ===== SECTION ===== */
+section {
+  margin-top: 30px;
+  animation: fadeInUp 1s ease forwards;
+}
+section h2 {
+  color: #0a2540;
+  border-bottom: 2px solid #e0e6ed;
+  padding-bottom: 6px;
+  margin-bottom: 15px;
+}
+ul {
+  padding-left: 20px;
+}
+li {
+  margin-bottom: 10px;
+}
+.info p {
+  margin: 6px 0;
+}
+
+/* ===== HOVER EFFECT (opsional) ===== */
+section:hover {
+  transform: scale(1.02);
+  transition: transform 0.3s ease;
+}
